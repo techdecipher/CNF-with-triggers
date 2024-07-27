@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html
+hooks:
+  BeforeInstall:
+    - location: pre-install-script/before_install.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: post-install-script/after_install.sh
+      timeout: 300
+      runas: root
