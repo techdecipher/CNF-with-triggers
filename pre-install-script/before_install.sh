@@ -5,8 +5,8 @@
 yum update -y
 
 yum install httpd -y
-systemctl start httpd -y
-systemctl enable httpd -y
+systemctl start httpd
+systemctl enable httpd
 
 # Install CodeDeploy Agent
 yum install -y ruby
